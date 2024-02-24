@@ -1,5 +1,17 @@
 # Lissajous curves
 
+Lissajous curves, also known as Lissajous figures or Bowditch curves, are the graphs of a system of parametric equations: $$x = A sin(at + δ)$$ $$y = B sin(bt)$$
+
+Where:
+
+A and B are the amplitudes of the oscillations in the x and y directions, respectively.
+a and b are the frequencies of the oscillations in the x and y directions, respectively.
+δ is the phase shift between the x and y oscillations.
+These curves are used in physics, astronomy, and other fields to describe oscillatory phenomena. They are named after Jules Antoine Lissajous, a French physicist who studied them in the 19th century.
+
+The shape of a Lissajous curve is determined by the ratio of the frequencies a and b, and the phase shift δ. When a and b are integers, the curve will be closed, meaning it will repeat itself after a certain period. The number of intersections in the curve is equal to |a - b|, if a and b are coprime.
+
+## Code expaination
 This Python script generates Lissajous curves using the `numpy` and `matplotlib` libraries. Here's a breakdown of what the code does:
 
 1. The necessary libraries are imported. These include `numpy` for numerical operations, `matplotlib.pyplot` for plotting, and `matplotlib.animation` for creating animations.
