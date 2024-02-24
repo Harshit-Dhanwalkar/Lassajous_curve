@@ -1,3 +1,5 @@
+# Lissajous curves
+
 This Python script generates Lissajous curves using the `numpy` and `matplotlib` libraries. Here's a breakdown of what the code does:
 
 1. The necessary libraries are imported. These include `numpy` for numerical operations, `matplotlib.pyplot` for plotting, and `matplotlib.animation` for creating animations.
