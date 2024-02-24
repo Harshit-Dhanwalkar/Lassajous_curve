@@ -16,4 +16,4 @@ This Python script generates Lissajous curves using the `numpy` and `matplotlib`
 
 This code is part of a larger script that generates and animates Lissajous curves. The remaining part of the script, which is not shown here, would likely involve a loop over the `parameters` list to generate the curves, and a call to an animation function such as `animation.FuncAnimation` to create the animations.
 
-For more information about Lissajous curves, see the [Wikipedia page](https://en.wikipedia.org/wiki/Lissajous_curve).
+For more information about Lissajous curves, see the [Wiki:Lissajous_curve](https://en.wikipedia.org/wiki/Lissajous_curve).
