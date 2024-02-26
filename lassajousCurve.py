@@ -9,13 +9,15 @@ parameters = [
     (1, 2, np.pi / 2),
     (3, 2, np.pi / 2),
     (3, 4, np.pi / 2),
-    (5, 4, np.pi / 2)
+    (5, 4, np.pi / 2),
+    (2, 3, np.pi / 4),  # Additional parameters
+    (4, 3, np.pi / 4)   # Additional parameters
 ]
 
 t = np.linspace(0, 2 * np.pi, 500)
 
-# Create a 2x2 grid of subplots
-fig, axs = plt.subplots(2, 2, figsize=(10, 10))
+# Create a 2x3 grid of subplots
+fig, axs = plt.subplots(2, 3, figsize=(15, 10))
 
 anis = []
 
@@ -39,8 +41,8 @@ for i, (a, b, delta) in enumerate(parameters):
     y = np.sin(b * t)
     
     # Determine the subplot position based on the loop index
-    row = i // 2
-    col = i % 2
+    row = i // 3
+    col = i % 3
     
     ax = axs[row, col]
     scat = ax.scatter(x[0], y[0], c=cm.jet(0), s=5)  # Reduced marker size
@@ -50,7 +52,7 @@ for i, (a, b, delta) in enumerate(parameters):
     anis.append(ani)
 
 # Save the animation as a GIF (comment out the line below if you don't want to save the animation)
-#ani.save('lissajous.gif', writer=PillowWriter(fps=50))
+# ani.save('lissajous.gif', writer=PillowWriter(fps=50))
 
 def on_key(event):
     if event.key == 'q':
