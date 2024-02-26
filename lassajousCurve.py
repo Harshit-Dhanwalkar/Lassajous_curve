@@ -14,7 +14,8 @@ parameters = [
 
 t = np.linspace(0, 2 * np.pi, 500)
 
-fig, axs = plt.subplots(len(parameters), 1, figsize=(8, 8))
+# Create a 2x2 grid of subplots
+fig, axs = plt.subplots(2, 2, figsize=(10, 10))
 
 anis = []
 
@@ -37,7 +38,11 @@ for i, (a, b, delta) in enumerate(parameters):
     x = np.sin(a * t + delta)
     y = np.sin(b * t)
     
-    ax = axs[i]
+    # Determine the subplot position based on the loop index
+    row = i // 2
+    col = i % 2
+    
+    ax = axs[row, col]
     scat = ax.scatter(x[0], y[0], c=cm.jet(0), s=5)  # Reduced marker size
     
     ani = animation.FuncAnimation(fig, update, len(x), fargs=[x, y, scat, ax, a, b, delta], repeat=True, blit=True)
@@ -45,7 +50,7 @@ for i, (a, b, delta) in enumerate(parameters):
     anis.append(ani)
 
 # Save the animation as a GIF (comment out the line below if you don't want to save the animation)
-ani.save('lissajous.gif', writer=PillowWriter(fps=50))
+#ani.save('lissajous.gif', writer=PillowWriter(fps=50))
 
 def on_key(event):
     if event.key == 'q':
